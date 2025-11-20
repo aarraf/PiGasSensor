@@ -1,0 +1,5 @@
+{
+    "disabled": ["ms-vscode-remote.remote-containers","vsciot-vscode.vscode-arduino","ms-python.vscode-pylance", "ms-python.python", "ms-python.debugpy", "streetsidesoftware.code-spell-checker", "ms-vscode.cpptools", "ms-vscode.cpptools-extension-pack", "ms-toolsai.jupyter", "ms-toolsai.vscode-jupyter-cell-tags","ms-toolsai.jupyter-keymap", "James-Yu.latex-workshop"],
+    "autoReload": false,
+    "openInNewWindow": false
+}

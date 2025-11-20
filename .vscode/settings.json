@@ -1,0 +1,7 @@
+{
+    "remote.SSH.showLoginTerminal": true,
+    "remote.SSH.useLocalServer": false
+    // High CPU usage of VScode --> deactivate extention: @builtin TypeScript
+    // https://medium.com/good-robot/use-visual-studio-code-remote-ssh-sftp-without-crashing-your-server-a1dc2ef0936d
+    
+}

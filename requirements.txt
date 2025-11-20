@@ -1,0 +1,8 @@
+# Install: pip3 install -r requirements.txt 
+
+numpy==2.0.1    # requires --> sudo apt install libopenblas-dev
+influxdb==5.3.2 # for influxdb version 1.X
+pandas==2.2.2
+
+adafruit-circuitpython-ens160==1.0.8 
+gpiozero==2.0.1

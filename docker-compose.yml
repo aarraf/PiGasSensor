@@ -1,0 +1,45 @@
+version: '3.4'
+x-logging:
+  &default-logging
+  options:
+    max-size: '12m'
+    max-file: '5'
+  driver: json-file
+
+services:
+
+  influxdb:
+    image: 'influxdb:1.8.10'
+    volumes:
+      - './influxdb:/var/lib/influxdb'
+    ports:
+      - '8086:8086'
+    environment:
+      - INFLUXDB_DATA_QUERY_LOG_ENABLED=false
+      - INFLUXDB_HTTP_LOG_ENABLED=false
+      - INFLUXDB_REPORTING_DISABLED=true
+    logging: *default-logging
+    restart: unless-stopped
+
+  measure_app:
+    #image: 'measure_app_slim'
+    image: 'measure_app_html'
+    #ports:
+    volumes:
+      - './measure.py:/app/measure.py'
+      - './database.py:/app/database.py'
+      - './ENS210.py:/app/ENS210.py'
+      - './weather_station.py:/app/weather_station.py'
+      - './measure.log:/app/measure.log'
+    devices:  
+      - "/dev/i2c-1:/dev/i2c-1"
+
+    depends_on:
+      - influxdb
+    logging: *default-logging
+    restart: unless-stopped
+
+
+
+
+  
