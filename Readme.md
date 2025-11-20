@@ -93,5 +93,5 @@ https://darkwolfcave.de/raspberry-pi-influxdb-backup-ganz-einfach-sichern/
 # SSH Time Synchronization
 
 ``` 
-ssh -i ~/.ssh/mimose-demo mimose-demo@hostname "sudo date -s '$(date)'"
+ssh -i ~/.ssh/key user@hostname "sudo date -s '$(date)'"
 ```
